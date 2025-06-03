@@ -16,7 +16,7 @@ function App() {
 
     try {
       // Buscar dados do endereço
-      const response = await fetch(`http://localhost:3001/cep/${cep}`);
+      const response = await fetch(`https://cep.awesomeapi.com.br/json/${cep}`);
       if (!response.ok) throw new Error('CEP não encontrado');
       const data = await response.json();
       setEndereco(data);
